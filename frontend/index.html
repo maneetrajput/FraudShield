@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="FraudShield helps users identify possible scam warning signs in suspicious messages."
+    >
+
+    <title>FraudShield | Stay Alert, Stay Protected</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <a href="#home" class="logo">
+            <span class="logo-icon">F</span>
+            FraudShield
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#checker">Message Checker</a>
+            <a href="#about">About</a>
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+
+            <p class="tagline">
+                YOUR DIGITAL SAFETY COMPANION
+            </p>
+
+            <h1>
+                Think Before You
+                <span>Trust.</span>
+            </h1>
+
+            <p class="hero-description">
+                Suspicious message mila hai?
+
+                FraudShield checks messages for common scam warning signs
+                and explains what you should look out for.
+            </p>
+
+            <a href="#checker" class="primary-button">
+                Check a Message →
+            </a>
+
+        </section>
+
+
+        <!-- Message Checker -->
+        <section class="checker-section" id="checker">
+
+            <div class="section-heading">
+
+                <p class="tagline">MESSAGE ANALYSER</p>
+
+                <h2>Let's Check That Message.</h2>
+
+                <p>
+                    Paste a suspicious message below to analyse
+                    possible warning signs.
+                </p>
+
+            </div>
+
+
+            <div class="checker-card">
+
+                <label for="messageInput">
+                    Paste your message
+                </label>
+
+                <textarea
+                    id="messageInput"
+                    placeholder="Example: Your account will be blocked. Verify your details immediately..."
+                    maxlength="3000"
+                ></textarea>
+
+                <div class="character-count">
+                    <span id="characterCount">0</span> / 3000 characters
+                </div>
+
+
+                <div class="button-row">
+
+                    <button
+                        type="button"
+                        id="clearButton"
+                        class="secondary-button"
+                    >
+                        Clear
+                    </button>
+
+                    <button
+                        type="button"
+                        id="checkButton"
+                        class="primary-button"
+                    >
+                        Analyse Message →
+                    </button>
+
+                </div>
+
+
+                <p class="privacy-note">
+                    Never paste passwords, OTPs, PINs or private
+                    financial information.
+                </p>
+
+            </div>
+
+
+            <!-- API Status -->
+            <div class="api-status" id="apiStatus" role="status">
+                Backend status: Not checked yet
+            </div>
+
+
+            <!-- Results -->
+            <section
+                class="result-card"
+                id="resultCard"
+                aria-live="polite"
+                aria-busy="false"
+            >
+
+                <h3>Analysis Results</h3>
+
+                <p id="resultMessage">
+                    Your analysis will appear here after you check a message.
+                </p>
+
+                <div id="resultDetails"></div>
+
+                <p id="resultDisclaimer" class="disclaimer">
+                    This educational prototype cannot guarantee whether
+                    a message is safe or fraudulent.
+                </p>
+
+            </section>
+
+        </section>
+
+
+        <!-- How It Works -->
+        <section class="how-section">
+
+            <div class="section-heading">
+
+                <p class="tagline">HOW IT WORKS</p>
+
+                <h2>Three Simple Steps.</h2>
+
+            </div>
+
+
+            <div class="steps">
+
+                <article class="step-card">
+
+                    <span class="step-number">01</span>
+
+                    <h3>Paste</h3>
+
+                    <p>
+                        Enter the suspicious message you want to check.
+                    </p>
+
+                </article>
+
+
+                <article class="step-card">
+
+                    <span class="step-number">02</span>
+
+                    <h3>Analyse</h3>
+
+                    <p>
+                        The frontend sends the message to our
+                        FastAPI backend for analysis.
+                    </p>
+
+                </article>
+
+
+                <article class="step-card">
+
+                    <span class="step-number">03</span>
+
+                    <h3>Understand</h3>
+
+                    <p>
+                        Review possible warning signs and practical
+                        safety suggestions.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- About -->
+        <section class="about-section" id="about">
+
+            <h2>Stay Alert. Stay Protected.</h2>
+
+            <p>
+                FraudShield is an educational project that demonstrates
+                how a web frontend can communicate with a Python FastAPI
+                backend to analyse suspicious messages.
+            </p>
+
+            <p class="disclaimer">
+                The initial version uses rule-based detection, not a trained
+                AI model. Results may be incorrect or incomplete.
+                Always verify important requests through official channels.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 FraudShield · Educational Project
+        </p>
+
+        <p>
+            Built with HTML, CSS, JavaScript and FastAPI.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
